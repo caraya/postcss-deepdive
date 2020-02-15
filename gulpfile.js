@@ -15,6 +15,12 @@ gulp.task('css', () => {
         }
       }),
       sorting({
+        'order': [
+          'custom-properties',
+          'declarations',
+          'at-rules',
+          'rules'
+        ],
         "properties-order": [
           "font",
           "color",
@@ -22,7 +28,8 @@ gulp.task('css', () => {
           "padding",
           "border",
           "background"
-        ]
+        ],
+        'unspecified-properties-position': 'bottom'
       }),
       autoprefixer(/* no options needed*/)
       // ,
